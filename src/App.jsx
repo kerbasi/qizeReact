@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "normalize.css";
 import "./App.css";
 import { Header } from "./components/Header";
 import { Quiz } from "./components/Quiz";
