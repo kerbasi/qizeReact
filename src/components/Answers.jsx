@@ -1,11 +1,10 @@
 ﻿import { Answer } from "./Answer";
-export const Answers = () => {
+export const Answers = ({ answers }) => {
   return (
     <div className='quiz-card__answer-container'>
-      <Answer>LoremLoremLorem</Answer>
-      <Answer>Lorem</Answer>
-      <Answer>LoremLoremLoremLoremLoremLorem</Answer>
-      <Answer>LoremLorem</Answer>
+      {answers.map((answer, i) => {
+        return <Answer key={i}>{answer}</Answer>;
+      })}
     </div>
   );
 };
