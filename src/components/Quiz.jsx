@@ -5,6 +5,7 @@ import { useGlobalContext } from "../appContext";
 import { useState } from "react";
 import { Result } from "./Result";
 import { Button } from "./Button";
+import { Final } from "./Final";
 
 export const Quiz = () => {
   const { length, questionNumber, setQuestionNumber, setScore, data, score } =
@@ -51,16 +52,11 @@ export const Quiz = () => {
         </>
       )}
       {!renderQuestion && (
-        <>
-          <div className='quiz-card__final-result'>
-            You've got: {score} right {score === 1 ? `answer` : `answers`} from{" "}
-            {`${length}`}!{" "}
-            {score / length >= 0.6
-              ? `It's good enough!`
-              : `You could do better!`}
-          </div>
-          <Button handleClickButton={handleClickNewButton}>Start again</Button>
-        </>
+        <Final
+          score={score}
+          length={length}
+          handleClickNewButton={handleClickNewButton}
+        />
       )}
     </div>
   );

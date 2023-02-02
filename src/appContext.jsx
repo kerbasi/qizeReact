@@ -25,8 +25,7 @@ const questions = [
       },
     ],
     resultTextFault: `The right answer is: template.
-    content.
-    cloneNode(true). Get a content of template and then clone it.`,
+    content. cloneNode(true). Get a content of template and then clone it.`,
     resultTextRight: "Absolutely right!",
   },
   {
@@ -37,7 +36,7 @@ const questions = [
       { text: `element(color.red)`, value: false, id: 2 },
       { text: `element = style.color("red");`, value: false, id: 3 },
     ],
-    resultTextFault: `The right answer is: element.style.color = "red". 
+    resultTextFault: `The right answer is: element.style. color = "red". 
     The style is a property that returns the inline style of an element 
     that contains a list of all styles properties for that element.`,
     resultTextRight: "Absolutely right!",
@@ -74,7 +73,7 @@ const questions = [
         id: 3,
       },
     ],
-    resultTextFault: `The right answer is: document.body.appendChild(button).
+    resultTextFault: `The right answer is: document.body. appendChild(button).
     It's append the button to the body of the document.`,
     resultTextRight: "Absolutely right!",
   },
