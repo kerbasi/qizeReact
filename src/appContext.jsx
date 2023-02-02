@@ -26,29 +26,16 @@ const appContext = createContext();
 const AppContext = ({ children }) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [score, setScore] = useState(0);
-  const [width, setWidth] = useState("0%");
-  const [renderQuestion, setRenderQuestion] = useState(true);
-
-  let data = questions[questionNumber];
-
-  useEffect(() => {
-    setWidth(`${(questionNumber / questions.length) * 100}%`);
-    if (questionNumber >= questions.length) {
-      setRenderQuestion(false);
-    }
-    data = questions[questionNumber];
-  }, [questionNumber]);
 
   return (
     <appContext.Provider
       value={{
-        renderQuestion,
         questionNumber,
         setQuestionNumber,
-        data,
+        data: questions[questionNumber],
         score,
         setScore,
-        width,
+        length: questions.length,
       }}
     >
       {children}
