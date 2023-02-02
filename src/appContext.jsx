@@ -9,6 +9,8 @@ const questions = [
       { text: "Fine", value: true, id: 2 },
       { text: "Later", value: false, id: 3 },
     ],
+    resultTextFault: "right answer is ...",
+    resultTextRight: "your right, it's ...",
   },
   {
     question: "How are you now?",
@@ -18,6 +20,41 @@ const questions = [
       { text: "Fine", value: true, id: 2 },
       { text: "Later", value: false, id: 3 },
     ],
+    resultTextFault: "right answer is ...",
+    resultTextRight: "your right, it's ...",
+  },
+  {
+    question: "How are you now?",
+    answers: [
+      { text: "Ok", value: false, id: 0 },
+      { text: "Not now", value: false, id: 1 },
+      { text: "Fine", value: true, id: 2 },
+      { text: "Later", value: false, id: 3 },
+    ],
+    resultTextFault: "right answer is ...",
+    resultTextRight: "your right, it's ...",
+  },
+  {
+    question: "How are you now?",
+    answers: [
+      { text: "Ok", value: false, id: 0 },
+      { text: "Not now", value: false, id: 1 },
+      { text: "Fine", value: true, id: 2 },
+      { text: "Later", value: false, id: 3 },
+    ],
+    resultTextFault: "right answer is ...",
+    resultTextRight: "your right, it's ...",
+  },
+  {
+    question: "How are you now?",
+    answers: [
+      { text: "Ok", value: false, id: 0 },
+      { text: "Not now", value: false, id: 1 },
+      { text: "Fine", value: true, id: 2 },
+      { text: "Later", value: false, id: 3 },
+    ],
+    resultTextFault: "right answer is ...",
+    resultTextRight: "your right, it's ...",
   },
 ];
 
@@ -32,9 +69,9 @@ const AppContext = ({ children }) => {
       value={{
         questionNumber,
         setQuestionNumber,
-        data: questions[questionNumber],
         score,
         setScore,
+        data: questions[questionNumber],
         length: questions.length,
       }}
     >
