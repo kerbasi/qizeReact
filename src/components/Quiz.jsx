@@ -44,7 +44,7 @@ export const Quiz = () => {
             <>
               <Result value={value} text={text} />
               <Button handleClickButton={handleClickNextButton}>
-                Next question
+                {questionNumber + 1 < length ? `Next question` : `Show results`}
               </Button>
             </>
           )}
