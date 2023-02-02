@@ -1,9 +1,30 @@
 ﻿import { Answer } from "./Answer";
-export const Answers = ({ answers }) => {
+import { useGlobalContext } from "../appContext";
+
+export const Answers = () => {
+  const { data, score, setScore, questionNumber, setQuestionNumber } =
+    useGlobalContext();
+  const answers = data.answers;
+
+  const handleClickAnswer = (value) => {
+    if (value) {
+      setScore(score + 1);
+    }
+    setQuestionNumber(questionNumber + 1);
+  };
+
   return (
     <div className='quiz-card__answer-container'>
-      {answers.map((answer, i) => {
-        return <Answer key={i}>{answer}</Answer>;
+      {answers.map((answer) => {
+        return (
+          <Answer
+            key={answer.id}
+            value={answer.value}
+            handleClickAnswer={handleClickAnswer}
+          >
+            {answer.text}
+          </Answer>
+        );
       })}
     </div>
   );
