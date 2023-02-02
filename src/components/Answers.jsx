@@ -11,6 +11,7 @@ export const Answers = () => {
       setScore(score + 1);
     }
     setQuestionNumber(questionNumber + 1);
+    console.log(questionNumber);
   };
 
   return (
