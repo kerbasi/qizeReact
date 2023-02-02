@@ -59,10 +59,20 @@ const questions = [
   {
     question: "Which command adds the button just created to the DOM?",
     answers: [
-      { text: `document.insertBefore(button)`, value: false, id: 0 },
+      {
+        text: `document.
+      insertBefore(button)`,
+        value: false,
+        id: 0,
+      },
       { text: `document.insert(button)`, value: false, id: 1 },
       { text: `window.appendChild(button)`, value: false, id: 2 },
-      { text: `document.body.appendChild(button)`, value: true, id: 3 },
+      {
+        text: `document.body.
+      appendChild(button)`,
+        value: true,
+        id: 3,
+      },
     ],
     resultTextFault: `The right answer is: document.body.appendChild(button).
     It's append the button to the body of the document.`,
