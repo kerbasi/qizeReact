@@ -120,6 +120,10 @@
   margin: 0;
   border: transparent;
   transition: background 0.4 ease-in-out;
+  width: 250px;
+  max-width: 90%;
+
+  word-wrap: break-word;
 }
 
 .quiz-card__button:hover {
