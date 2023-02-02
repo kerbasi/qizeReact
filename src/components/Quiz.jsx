@@ -31,7 +31,11 @@ export const Quiz = () => {
 
   return (
     <div className='quiz-card'>
-      <ProgressBar width={width} />
+      <ProgressBar
+        width={width}
+        questionNumber={questionNumber}
+        length={length}
+      />
       {renderQuestion && (
         <>
           <Question />
