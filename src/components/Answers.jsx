@@ -1,7 +1,7 @@
 ﻿import { Button } from "./Button";
 import { useGlobalContext } from "../appContext";
 
-export const Answers = ({ setShowResult }) => {
+export const Answers = ({ setShowResult, showResult }) => {
   const { data, score, setScore, questionNumber, setQuestionNumber } =
     useGlobalContext();
   const answers = data.answers;
@@ -23,6 +23,7 @@ export const Answers = ({ setShowResult }) => {
             key={answer.id}
             value={answer.value}
             handleClickButton={handleClickAnswer}
+            showResult={showResult}
           >
             {answer.text}
           </Button>

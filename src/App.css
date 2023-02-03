@@ -1,6 +1,6 @@
 .page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,12 +12,43 @@
   font-weight: 400;
 }
 
+.header {
+  width: 80%;
+  max-width: 500px;
+  min-width: 280px;
+}
+
+.language-menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.language-menu__item-button {
+  background: transparent;
+  border: transparent;
+  font-weight: 700;
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+
+.language-menu__item-button:hover {
+  filter: opacity(0.5);
+}
+
+.language-menu__item-button_selected {
+  /* border: 1px solid rgb(100, 100, 100); */
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(100, 100, 100);
+}
+
 .quiz-card {
   padding: 25px 0;
   width: 80%;
   max-width: 500px;
   min-width: 280px;
-  max-height: 80%;
   min-height: 50%;
   background: #f7fff7;
   border-radius: 20px;
@@ -92,7 +123,7 @@
   box-shadow: 2px 2px 3px rgb(100, 100, 100);
   box-sizing: border-box;
   padding: 20px 40px;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   overflow-y: hidden;
 }
@@ -122,16 +153,23 @@
   transition: background 0.4 ease-in-out;
   width: 250px;
   max-width: 90%;
-
-  word-wrap: break-word;
+  cursor: pointer;
 }
 
 .quiz-card__button:hover {
   background: rgb(204, 204, 204);
 }
 
+.quiz-card__button_selected_true {
+  background: #39e686;
+}
+
+.quiz-card__button_selected_false {
+  background: #e66139;
+}
+
 .quiz-card__result {
-  margin: 20px auto;
+  margin: 0 auto 20px;
   text-align: center;
   max-width: 90%;
   max-height: 80%;
@@ -140,7 +178,7 @@
   box-shadow: 2px 2px 3px rgb(100, 100, 100);
   box-sizing: border-box;
   padding: 20px 40px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   overflow-y: hidden;
 }
@@ -150,12 +188,12 @@
 }
 
 .quiz-card__final-result {
-  margin: 20px auto 0;
+  margin: 20px auto;
   text-align: center;
   max-width: 90%;
   max-height: 80%;
   border-radius: 20px;
-  background: #ffe66d;
+  background: #3acfe2;
   box-shadow: 2px 2px 3px rgb(100, 100, 100);
   box-sizing: border-box;
   padding: 20px 40px;

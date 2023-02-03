@@ -40,7 +40,7 @@ export const Quiz = () => {
       {renderQuestion && (
         <>
           <Question />
-          {!showResult && <Answers setShowResult={setShowResult} />}
+          <Answers setShowResult={setShowResult} showResult={showResult} />
           {showResult && (
             <>
               <Result value={value} text={text} />
