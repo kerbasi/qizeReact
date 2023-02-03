@@ -73,7 +73,7 @@
       },
     ],
     resultTextFault: `Правильный ответ: document.body. appendChild(button).
-    Она добавит кнопку к корпусу документа.`,
+    Она добавит кнопку к body документа.`,
     resultTextRight: "Правильно!",
   },
   {
